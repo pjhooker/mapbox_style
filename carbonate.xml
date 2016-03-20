@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#f1eee8" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">8.9073,45.6687,8.9618,45.7218</Parameter>
+  <Parameter name="center">8.9406,45.6848,14</Parameter>
+  <Parameter name="format">png</Parameter>
+  <Parameter name="minzoom">14</Parameter>
+  <Parameter name="maxzoom">19</Parameter>
+  <Parameter name="name"><![CDATA[car_base]]></Parameter>
+</Parameters>
+
+
+<Style name="pgconfine_back" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#559944" stroke-width="0" />
+    <PolygonSymbolizer fill-opacity="1" fill="#e1e1e1" />
+  </Rule>
+</Style>
+<Layer name="pgconfine_back"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>pgconfine_back</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/pjh/Documents/MapBox/project/carbonate/layers/pgconfine_back/pg_confine.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="pgdestinazioni" filter-mode="first" >
+  <Rule>
+    <Filter>([scen2c] = '5')</Filter>
+    <LineSymbolizer stroke="#559944" stroke-width="0" />
+    <PolygonSymbolizer fill="#dc9e9e" fill-opacity="1" />
+  </Rule>
+  <Rule>
+    <Filter>([scen2c] = '4')</Filter>
+    <LineSymbolizer stroke="#559944" stroke-width="0" />
+    <PolygonSymbolizer fill="#cdf6c9" fill-opacity="1" />
+  </Rule>
+  <Rule>
+    <Filter>([scen2c] = '3')</Filter>
+    <LineSymbolizer stroke="#559944" stroke-width="0" />
+    <PolygonSymbolizer fill="#f6eeb6" fill-opacity="1" />
+  </Rule>
+  <Rule>
+    <Filter>([scen2c] = '2')</Filter>
+    <LineSymbolizer stroke="#559944" stroke-width="0" />
+    <PolygonSymbolizer fill="#f1d9d8" fill-opacity="1" />
+  </Rule>
+  <Rule>
+    <Filter>([scen2c] = '1')</Filter>
+    <LineSymbolizer stroke="#559944" stroke-width="0" />
+    <PolygonSymbolizer fill="#f1eee8" fill-opacity="1" />
+  </Rule>
+  <Rule>
+    <LineSymbolizer stroke="#559944" stroke-width="0" />
+    <PolygonSymbolizer fill-opacity="1" />
+  </Rule>
+</Style>
+<Layer name="pgdestinazioni"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>pgdestinazioni</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/pjh/Documents/MapBox/project/carbonate/layers/pgdestinazioni/pg_destinazioni.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="plaero" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="#c8c9c9" />
+  </Rule>
+</Style>
+<Layer name="plaero"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>plaero</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/pjh/Documents/MapBox/project/carbonate/layers/plaero/pl_aero.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="pgedifici" filter-mode="first" >
+  <Rule>
+    <Filter>([tipo_af] = 'servizi')</Filter>
+    <LineSymbolizer stroke="#559944" stroke-width="0.5" />
+    <PolygonSymbolizer fill="#b1b1b0" fill-opacity="1" />
+  </Rule>
+  <Rule>
+    <Filter>([tipo_af] = 'industria')</Filter>
+    <LineSymbolizer stroke="#559944" stroke-width="0.5" />
+    <PolygonSymbolizer fill="#c1adad" fill-opacity="1" />
+  </Rule>
+  <Rule>
+    <Filter>([tipo_af] = 'residenza')</Filter>
+    <LineSymbolizer stroke="#559944" stroke-width="0.5" />
+    <PolygonSymbolizer fill="#c1b0af" fill-opacity="1" />
+  </Rule>
+  <Rule>
+    <Filter>([tipo_af] = 'accessorio')</Filter>
+    <LineSymbolizer stroke="#559944" stroke-width="0.5" />
+    <PolygonSymbolizer fill="#ededed" fill-opacity="1" />
+  </Rule>
+  <Rule>
+    <LineSymbolizer stroke="#559944" stroke-width="0.5" />
+    <PolygonSymbolizer fill-opacity="1" />
+  </Rule>
+</Style>
+<Layer name="pgedifici"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>pgedifici</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/pjh/Documents/MapBox/project/carbonate/layers/pgedifici/pg_edifici.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[pgedifici]]></Parameter>
+       <Parameter name="project"><![CDATA[carbonate]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="pgconfine" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#5b5b5b" stroke-width="4" />
+    <PolygonSymbolizer fill-opacity="0" fill="#aaee88" />
+  </Rule>
+</Style>
+<Layer name="pgconfine"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>pgconfine</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/pjh/Documents/MapBox/project/carbonate/layers/pgconfine/pg_confine.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[pgconfine]]></Parameter>
+       <Parameter name="project"><![CDATA[carbonate]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
